@@ -1,0 +1,54 @@
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding-bottom: 3rem;
+}
+
+.card {
+  height: 48rem;
+  width: 30rem;
+  margin: 3rem;
+  position: relative;
+  border-bottom: 2px solid $color-primary;
+
+  &__image {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 1rem;
+    text-align: left;
+    line-height: 2.3rem;
+    color: $color-primary;
+    &--name {
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    &--brand {
+      font-size: $font-size-default;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    &--price {
+      font-size: $font-size-default;
+      font-weight: 500;
+    }
+  }
+  &__button-container {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 10%;
+  }
+}

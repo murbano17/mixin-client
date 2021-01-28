@@ -1,0 +1,35 @@
+.summary {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  &__heading {
+    font-size: 2rem;
+    color: $color-primary;
+  }
+  &__product {
+    position: relative;
+    border-bottom: 1px solid $color-light-grey;
+    &-name {
+      font-size: 1.6rem;
+    }
+    &-quantity {
+      font-size: 1.3rem;
+    }
+    &-price {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1.3rem;
+      padding-right: 1rem;
+    }
+  }
+  &__total {
+    position: relative;
+    font-size: 1.6rem;
+    &-price {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-right: 1rem;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  color: $color-primary;
+  position: relative;
+  @include res-desk {
+    padding: 10rem;
+  }
+  &__go-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    cursor: pointer;
+
+    @include res-desk {
+      margin-top: 5rem;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+    i {
+      padding-right: 1rem;
+    }
+  }
+
+  &__container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include res-desk {
+      justify-content: center;
+      width: 90rem;
+      flex-direction: row;
+    }
+  }
+  &__info {
+    padding-top: 2rem;
+    @include res-desk {
+      padding-left: 2rem;
+      padding-top: 5rem;
+    }
+  }
+
+  &__image {
+    width: 28rem;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  &__brand {
+    font-size: 2rem;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__description {
+    font-size: $font-size-default;
+  }
+  &__price {
+    font-size: $font-size-default;
+    font-weight: 600;
+  }
+}

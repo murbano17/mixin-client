@@ -1,0 +1,40 @@
+.home {
+  height: 85vh;
+  background-color: $color-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include res-desk {
+    align-items: flex-start;
+    padding-left: 20%;
+  }
+
+  &__info {
+    margin-top: 20%;
+    @include res-desk {
+      margin-top: 10%;
+    }
+  }
+
+  &__heading {
+    color: $color-tertiary;
+    font-size: 4.4rem;
+    line-height: 4.5rem;
+    margin-bottom: 2rem;
+
+    @include res-desk {
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+    
+    span {
+      color: $color-secondary;
+    }
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

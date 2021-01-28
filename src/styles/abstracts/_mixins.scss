@@ -1,0 +1,28 @@
+// media query manager
+
+/* 600-900px     Tablet */
+@mixin res-tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+/* 900-1200px    Tablet landscape
+ */
+@mixin res-desk {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+
+@mixin res-bigdesk {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin navbar {
+  @media (max-width: 900px) {
+    @content;
+  }
+}

@@ -1,0 +1,21 @@
+.pagination__ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  .controls {
+    padding: 2rem 2rem;
+    font-size: 1.6rem;
+    color: $color-primary;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+  .active {
+    color: $color-secondary;
+    text-decoration: underline;
+  }
+}
