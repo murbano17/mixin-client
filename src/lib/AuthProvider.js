@@ -1,4 +1,5 @@
 import React from "react";
+import Spinner from "../components/Spinner";
 import auth from "./AuthService"; // Importamos funciones para llamadas axios a la API
 const { Consumer, Provider } = React.createContext();
 
@@ -116,7 +117,7 @@ class AuthProvider extends React.Component {
     const { login, logout, signup, loginGoogle, userCart } = this;
 
     return isLoading ? (
-      <div>Loading</div>
+      <Spinner />
     ) : (
       <Provider
         value={{

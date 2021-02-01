@@ -3,12 +3,13 @@ import axios from "axios";
 class Auth {
   constructor() {
     this.services = axios.create({
-      baseURL: "http://localhost:4000",
+      baseURL: process.env.REACT_APP_API_URL,
       withCredentials: true,
     });
   }
 
   signup({ username, email, password }) {
+    console.log(this.services)
     const request = this.services.post("/api/auth/signup", {
       username,
       email,
@@ -24,7 +25,7 @@ class Auth {
     console.log(request);
     return request;
   }
-  
+
   loginGoogle = async ({ tokenId }) => {
     const user = await this.services.post("/api/auth/googlelogin", { tokenId });
     return user.data;

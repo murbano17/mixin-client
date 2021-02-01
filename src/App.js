@@ -10,8 +10,8 @@ import PrivateRoute from "./components/PrivateRoute";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
-import Payment from "./pages/Payment";
 import Home from "./pages/Home";
+import Checkout from "./pages/Checkout";
 
 class App extends Component {
   render() {
@@ -31,7 +31,7 @@ class App extends Component {
               path="/products/:id"
               component={ProductDetail}
             />
-            <PrivateRoute exact path="/payment" component={Payment} />
+            <PrivateRoute exact path="/checkout" component={Checkout} />
           </Switch>
         </div>
       </AuthProvider>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Pagination from "../components/Pagination";
 import Product from "../components/Product";
+import Spinner from "../components/Spinner";
 import { withAuth } from "../lib/AuthProvider";
 import services from "../lib/AuthService";
 
@@ -49,6 +50,8 @@ const Products = (props) => {
         paginate={paginate}
         currentPage={currentPage}
       />
+
+      {loading && <Spinner />}
     </div>
   );
 };

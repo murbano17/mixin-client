@@ -47,12 +47,10 @@
     font-size: 1.5rem;
     text-transform: uppercase;
     transition: all 0.2s;
-    width: 30rem;
+    width: 25rem;
     margin-top: 2rem;
     letter-spacing: 0.3rem;
-    @include res-desk {
-      width: 35rem;
-    }
+  
     &:hover {
       color: $color-secondary;
       background-color: $color-white;

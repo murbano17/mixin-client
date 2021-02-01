@@ -17,7 +17,7 @@ const Signup = (props) => {
     e.preventDefault();
     const validationForm = handleInputValidations(values);
     if (validationForm) {
-      props.login(values);
+      props.signup(values);
     }
   };
 

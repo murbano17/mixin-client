@@ -9,12 +9,17 @@ const AuthGoogle = (props) => {
     props.loginGoogle({ tokenId, user });
   };
 
+  const responseGoogle = (response) => {
+    console.log(response);
+  };
+
   return (
     <div className="sign__google">
       <GoogleLogin
-        clientId="180040016324-j06hkn7aoj96o96k7068ga2v0gu012bp.apps.googleusercontent.com"
+        clientId={process.env.REACT_APP_GOOGLE_ID}
         buttonText="Log in"
         onSuccess={responseSuccesGoogle2}
+        onFailure={responseGoogle}
         cookiePolicy={"single_host_origin"}
         render={(renderProps) => (
           <div className="btn-google" onClick={renderProps.onClick}>
